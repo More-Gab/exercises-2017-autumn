@@ -1,0 +1,122 @@
+html {
+    font-family: Arial;
+    /* 
+    
+    
+    font-size: 1.25vw; 
+    
+/*
+
+
+    */
+
+*/
+
+}
+body {
+    font-size: 1.5rem;
+}
+/* H1 styles  */
+h1 {
+    color: #aa0692;
+    color: rgb(0,0,0);
+    color: rgba(0,0,0,0.5);
+}
+h1:hover {
+    color: white;
+}
+
+a {
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+body div#biography.my_favourite_div p a {
+    /* color: blue; */
+}
+
+body > section > #biography {
+    /* display: none; */
+}
+
+.my_favourite_div.orange {
+    color: red;
+}
+
+#biography {
+    font-size: 0.8rem;
+}
+p {
+    color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 2rem;
+}
+a {
+    font-size: 1.2rem;
+}
+h1, h2, h3 {
+    font-family: Impact;
+}
+
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-variant: small-caps;
+}
+
+.my_favourite_element {
+    color: orange;
+}
+
+#filmography {
+    color: red;
+}
+
+#filmography_by_year {
+    color: pink;
+}
+
+/* paragraphs */
+p.red {
+    background-color: red;
+}
+p.green {
+    background-color: green;
+}
+p.blue {
+    background-color: blue;
+}
+
+p.blue a {
+    color: yellow;
+}
+p.red a, p.green a {
+    color: white;
+}
+
+ul .seen {
+    color: silver;
+}
+ul .unseen {
+    color: red;
+}
+ul .seen.good {
+    color: green;
+}
+
+div#biography a {
+    text-decoration: none;
+}
+div#biography a:hover {
+    text-decoration: underline;
+}
+p:hover a {
+    text-decoration: underline;
+}
