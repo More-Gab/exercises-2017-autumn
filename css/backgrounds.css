@@ -1,0 +1,61 @@
+/*
+give the #outer element a width of 80%, minimum height of 80vh, top margin of 10vh and position it in the center of the screen (with margin: auto)
+*/
+#outer {
+    width: 80%;
+    min-height: 80vh;
+    margin-top: 10vh;
+    margin: auto;
+    /* overflow: hidden; */
+}
+
+/* give the #inner element a width of 50% and a margin of 10% */
+
+#inner {
+    width: 50%;
+    margin: 10%;
+}
+
+/* give the #outer element a linear gradient background which goes top to bottom, starts with #F46629 at 0%, continues with #EAAA2A at 45%, #47AEB7 at 70% and ends with #23538A at 100% */
+#outer {
+    background: linear-gradient(180deg, #f46629 0%, #EAAA2A 45%, #47AEB7 70%, #23538A 100%);
+}
+
+/* give the #inner element a linear gradient background which goes left to right, starts with black at 50% opacity, keeps this background color and opacity until 75% of it's width and at 100% of it's width it should be black with 0% opacity */
+#inner {
+   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.0) 100%);
+}
+
+/* Set the font color of #inner to #ffffff */
+#inner {
+    color: #ffffff;
+}
+
+/* Give the #smiling element a width of 200px and height of 200px 
+Give the #smiling element a white, 1px wide border.
+Give the #smiling element the downloaded smiley as a background image that is positioned in the center of the element
+Set the width of the smiley background image to be 50% of the element's width while keeping it's aspect ratio.*/
+#smiling {
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid #ffffff; */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    /* background: transparent url('smiley.png') center center/50% auto repeat scroll; */
+    background-image: url('smiley.png');
+    background-size: 50% auto;
+    background-position: center center;
+}
+
+#nebula {
+    width: 100%;
+    color: #ffffff;
+    padding: 2em;
+    /* background-image: url('nebula.jpg');
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed; */
+
+    background: url('nebula.jpg') left top/cover fixed;
+}
