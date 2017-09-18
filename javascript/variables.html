@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript variables</title>
-
-    <script src="js/variables.js"></script>
+    
 </head>
 <body>
     
+    <div id="message">Warning! Not enough coffee!</div>
+
+    <button onclick="console.log('HEY');">console.log</button>
+    <button onclick="
+        var message_element = document.getElementById('message');
+        message_element.innerHTML = 'The message has changed!';
+    ">Change message</button>
+
+    <button onclick="
+        var message_element = document.getElementById('message');
+        alert(message_element.innerHTML);
+    ">Alert message!</button>
+
+    <script src="js/variables.js"></script>
+
 </body>
 </html>

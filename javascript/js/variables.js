@@ -53,3 +53,14 @@ console.log(type);
 
 type = typeof value2;
 console.log(type);
+
+
+var message_element = document.getElementById('message');
+console.log(message_element);
+console.log(typeof message_element);
+
+var text_within_message = message_element.innerHTML; // reading the HTML
+console.log(text_within_message); // logging it
+message_element.innerHTML = 'A new message!'; // writing the HTML
+console.log(text_within_message); // logs the original message
+console.log(message_element.innerHTML);
