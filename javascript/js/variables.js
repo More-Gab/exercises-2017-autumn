@@ -64,3 +64,15 @@ console.log(text_within_message); // logging it
 message_element.innerHTML = 'A new message!'; // writing the HTML
 console.log(text_within_message); // logs the original message
 console.log(message_element.innerHTML);
+
+// function declaration:
+// this function changes the innerHTML of element id="message"
+// to 'A new message!'
+function change_message() {
+    // change the contents of the message element (id="message")
+    var message_element = document.getElementById('message');
+    message_element.innerHTML = 'Message set by a function!';
+}
+
+// function call:
+change_message();

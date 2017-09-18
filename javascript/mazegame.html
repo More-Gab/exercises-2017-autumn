@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maze game</title>
+
+    <script src="js/mazegame.js"></script>
+
+    <style>
+#board > div {
+    display: none;
+}
+#board.not-started div.not-started {
+    display: block;
+}
+#board.started div.started {
+    display: block;
+}
+#board.finished div.finished {
+    display: block;
+}
+#board.game-over div.game-over {
+    display: block;
+}
+
+#board > div.block {
+    display: block;
+}
+.block {
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+}
+    </style>
+</head>
+<body>
+    
+    <h1>Maze</h1>
+
+    <div id="board" class="finished">
+
+        <div class="not-started">The game has not started</div>
+
+        <div class="started">The game has started</div>
+
+        <div class="finished">The game has finished</div>
+
+        <div class="game-over">GAME OVER</div>
+
+        <div class="block" onmouseover="console.log('the mouse entered this element');"></div>
+
+    </div>
+
+    <script>
+var board = document.getElementById('board');
+board.className = 'started';
+</script>
+
+<button onclick="
+    var board = document.getElementById('board');
+    board.className = 'finished';
+">Finish the game</button>
+
+</body>
+</html>
