@@ -12,26 +12,61 @@
 #board > div {
     display: none;
 }
-#board.not-started div.not-started {
-    display: block;
-}
-#board.started div.started {
-    display: block;
-}
+#board.not-started div.not-started,
+#board.started div.started,
+#board.game-over div.game-over,
 #board.finished div.finished {
-    display: block;
-}
-#board.game-over div.game-over {
-    display: block;
+    display: flex;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
+#board {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+}
 #board > div.block {
     display: block;
 }
-.block {
+.obstacle {
     height: 100px;
     width: 100px;
     background-color: orange;
+}
+.block.start,
+.block.end {
+    background-color: orange;
+    padding: 0.5em;
+}
+.block.start {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.block.end {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#board.not-started .block.start,
+#board.started .block.end {
+    background-color: green;
+    color: white;
+}
+
+#board .obstacle.obstacle1 {
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+
 }
     </style>
 </head>
@@ -39,7 +74,7 @@
     
     <h1>Maze</h1>
 
-    <div id="board" class="finished">
+    <div id="board" class="not-started">
 
         <div class="not-started">The game has not started</div>
 
@@ -49,13 +84,16 @@
 
         <div class="game-over">GAME OVER</div>
 
-        <div class="block" onmouseover="console.log('the mouse entered this element');"></div>
+        <div class="obstacle" onmouseover="console.log('the mouse entered this element');"></div>
+        <div class="obstacle obstacle1" onmouseover="setGameState('game-over');"></div>
 
+        <div class="block start" onmouseover="setGameState('started');">START</div>
+        <div class="block end" onmouseover="setGameState('finished');">END</div>
     </div>
 
     <script>
-var board = document.getElementById('board');
-board.className = 'started';
+// var board = document.getElementById('board');
+// board.className = 'started';
 </script>
 
 <button onclick="
