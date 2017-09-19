@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page title</title>
+
+    <style>
+/*
+12 pixels on displays of width less than 320 pixels
+14 pixels on displays of width between 320 and 480 pixels
+20 pixels on displays of width between 480 and 800 pixels
+24 pixels on displays of width between 800 and 1280 pixels
+32 pixels on displays wider than 1280 pixels
+*/
+h1 {
+    font-size: 12px;
+}
+@media screen and (min-width: 320px) {
+    h1 {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>A headline for this page</h1>
+</body>
+</html>

@@ -1,0 +1,12 @@
+$my_color: #ff0066;
+
+nav {
+    border: 1px solid $my_color;
+}
+nav a {
+    color: $my_color;
+}
+nav a:hover {
+    background-color: $my_color;
+    color: #ffffff;
+}
