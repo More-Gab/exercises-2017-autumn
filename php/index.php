@@ -283,7 +283,7 @@ true;
 !""; // === true
 !!1; // === true
 
-$age = 35;
+$age = 18.5;
 $gender = 'male';
 $employed = true;
 
@@ -300,3 +300,10 @@ $employed != 1;
 $employed == "";
 $employed == [];
 $employed == null;
+
+if($age <= 18) {
+    echo 'not greater than 18';
+}
+if($age < 12 && $gender == 'female') {}
+
+if($age >= 18 && !$employed) {}
