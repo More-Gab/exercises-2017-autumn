@@ -1,0 +1,26 @@
+Student
+----
+id:
+first_name: SHORT STRING
+last_name: SHORT STRING
+age: INT
+gender: BOOL
+nationality: INTEGER (foreign key of Country)
+birthday: DATE
+bachelor_degree: SHORT STRING
+address: LONG STRING
+zip_code: SHORT STRING
+city: SHORT STRING
+street: SHORT STRING
+house_nr: INTEGER
+email: SHORT STRING
+facebook_id: SHORT STRING
+telephone: SHORT STRING
+has_graduated: BOOLEAN
+motivation: LONG STRING
+
+Country:
+--------
+id:
+name:
+code: (CZ)

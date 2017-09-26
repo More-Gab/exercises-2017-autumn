@@ -8,4 +8,13 @@ class blog_post
     public $added_at = null;
     public $user_id = null;
     public $status = 'not-published';
+
+    public function publish()
+    {
+        // plenty of code
+        // ...
+
+        
+        $this->status = 'published';
+    }
 }

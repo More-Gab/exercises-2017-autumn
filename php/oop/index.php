@@ -5,6 +5,8 @@ require_once 'user.php';
 // require the declaration of blog_post class
 require_once 'blog_post.php';
 
+$next_user_id = 0;
+
 // create new object of the class user
 $steve = new user();
 
@@ -35,11 +37,35 @@ $first_post->added_at = date('j. n. Y G:i');
 $first_post->user_id = 1;
 $first_post->status = 'published';
 
-// calling the dumpMe method of user class on object $steve
+// call the dumpMe method of user class on object $steve
 $steve->dumpMe();
 
+// create a new object of the class user
 $bob = new user();
+// call the dumpMe method of user class on object $bob
 $bob->dumpMe();
+
+// call the publish method of blog_post class on object $first_post
+$first_post->publish();
+
+// create a new object of class blog_post
+$second_post = new blog_post();
+// call the publish method of blog_post class on object $second_post
+$second_post->publish();
+
+// have a look at $first_post
+echo '<br><br>';
+var_dump($first_post);
+
+// have a look at $second_post
+echo '<br><br>';
+var_dump($second_post);
+
+$stuart =  new user('Stuart Little');
+$stuart->dumpMe();
+
+// THURSDAY:
+$connection = new PDO('mysql: ...', 'root', 'rootroot');
 
 ?>
 <!DOCTYPE html>
