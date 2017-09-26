@@ -80,8 +80,40 @@ $messages['error']['some key'] = 'Another error';
 
 $messages['error'][2] = 'CHANGED MESSAGE';
 
-$messages[0] = [];
-$messages[0][] = 'abc';
+// $messages[0] = [];
+// $messages[0][] = 'abc';
+
+
+function do_something_risky() {
+  // do the risky stuff
+
+  // return new messages
+  return [
+    'error' => [
+      'I knew this would happen!',
+      'This always happens.'
+    ],
+    'warning' => [
+      'You should fix this before proceeding'
+    ],
+    'success' => []
+  ];
+}
+
+// let's try it
+$new_messages = do_something_risky();
+
+// $merged_messages = array_merge($messages, $new_messages);
+$merged_messages = [];
+$merged_messages['error'] = array_merge($messages['error'], $new_messages['error']);
+$merged_messages['warning'] = array_merge($messages['warning'], $new_messages['warning']);
+$merged_messages['success'] = array_merge($messages['success'], $new_messages['success']);
+
+$merged_messages = [];
+foreach($messages as $message_type => $messages_of_type)
+{
+    $merged_messages[$message_type] = array_merge($messages_of_type, $new_messages[$message_type]);
+}
 
 ?>
 <!DOCTYPE html>
@@ -193,7 +225,7 @@ and print it as well
 
     <div class="messages"> <!-- wrapper (not required) -->
     
-        <?php foreach($messages as $message_type => $messages_of_type) : ?>
+        <?php foreach($merged_messages as $message_type => $messages_of_type) : ?>
 
             <?php foreach($messages_of_type as $message) : ?>
 
