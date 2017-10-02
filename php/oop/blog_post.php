@@ -44,4 +44,23 @@ class blog_post
         
         $this->status = 'published';
     }
+
+    public function __toString()
+    {
+        return "<div class=\"post\">
+
+            <h2>
+                $this->headline
+            </h2>
+
+            <div class=\"date\">
+                $this->added_at
+            </div>
+
+            <div class=\"text\">
+                $this->text
+            </div>
+
+        </div>";
+    }
 }

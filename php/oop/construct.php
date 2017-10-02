@@ -54,23 +54,12 @@ $nr_of_stuarts_posts = $stuart->getNumberOfPosts();
     
     <?php foreach($all_posts as $post) : ?>
 
-        <div class="post">
-
-            <h2>
-                <?php echo $post->headline; ?>
-            </h2>
-
-            <div class="date">
-                <?php echo $post->added_at; ?>
-            </div>
-
-            <div class="text">
-                <?php echo $post->text; ?>
-            </div>
-
-        </div>
+        <?php echo $post; ?>
 
     <?php endforeach; ?>
+
+
+    <?php echo $second_post; ?>
 
 </body>
 </html>
