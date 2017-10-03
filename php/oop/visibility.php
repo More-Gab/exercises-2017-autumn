@@ -41,6 +41,18 @@ class warehouse
 
         $this->nr_of_crates += count($array_of_arguments);
     }
+
+    // get- method for nr_of_crates property
+    public function getNrOfCrates()
+    {
+        return $this->nr_of_crates;
+    }
+
+    // get- method for crates property
+    public function getCrates()
+    {
+        return $this->crates;
+    }
 }
 
 $warehouse1 = new warehouse();
@@ -57,3 +69,31 @@ $warehouse2->name = 'Docks warehouse';
 
 var_dump($warehouse1);
 var_dump($warehouse2);
+
+// var_dump($_SERVER);
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visibility</title>
+</head>
+<body>
+
+    <div class="warehouse">
+        <h2><?php echo $warehouse1->name; ?></h2>
+        <div>Contains <?php echo $warehouse1->getNrOfCrates(); ?> crates</div>
+        <ul>
+            
+            <?php foreach($warehouse1->getCrates() as $crate) : ?>
+                <li><?php echo $crate; ?></li>
+            <?php endforeach; ?>
+            
+        </ul>
+    </div>
+    
+</body>
+</html>
