@@ -41,16 +41,27 @@ class bondCase
     // 10.
     protected $girls = [];
 
+    // 16.
+    public static $cases_solved = 0;
+    public static $girls_met = 0;
+
     // 9.
     public function __construct($year)
     {
         $this->year = $year;
+
+        // 17.
+        static::$cases_solved++;
+        // bondCase::$cases_solved++; // same as above
     }
 
     // 11.
     public function addGirl($name)
     {
         $this->girls[] = $name;
+
+        // 18.
+        static::$girls_met++;
     }
 
     // 8.
@@ -89,6 +100,12 @@ class bondCase
     {
         $this->enemy = $value;
     }
+
+    // 19.
+    public static function getAvgGirlsPerCase()
+    {
+        return static::$girls_met / static::$cases_solved;
+    }
 }
 
 // 12.
@@ -117,7 +134,4 @@ $array['new key'] = 'new item';
 array_push($array, 'new item as last'); // added as last
 array_unshift($array, 'new item as first'); // added as first (numeric keys change)
 
-
-
-
-
+echo 'On average Bond has met ' . bondCase::getAvgGirlsPerCase() . ' girls per case.';
