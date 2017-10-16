@@ -1,17 +1,17 @@
 INSERT INTO `Courses` (`id`, `title`, `teacher`, `semesters`, `capacity`) VALUES
 ('6.00SC',	'Introduction to Computer Science',	'danpin1',	1,	160),
 ('6.01SC',	'Introduction to Electrical Engineering',	'waywal1',	1,	160),
-('6.002',	'Circuits and Electronics',	'danmck0',	2,	80),
-('6.003',	'Signals and Systems',	'danmck1',	2,	40),
+('6.002',	'Circuits and Electronics',	'danmck2',	2,	80),
+('6.003',	'Signals and Systems',	'danmck2',	2,	40),
 ('6.004',	'Computation Structures',	'danmck2',	1,	60),
 ('6.006',	'Introduction to Algorithms',	'hencon1',	1,	180),
 ('6.033',	'Computer System Engineering',	'timrey3',	1,	120),
-('6.034',	'Artificial Intelligence',	'katmat0',	2,	65),
+('6.034',	'Artificial Intelligence',	'katmat1',	2,	65),
 ('6.035',	'Computer Language Engineering',	'katmat1',	2,	50),
-('6.042J',	'Mathematics for Computer Science',	'ednpor1',	2,	120),
+('6.042J',	'Mathematics for Computer Science',	'ednpor2',	2,	120),
 ('6.045J',	'Automata, Computability, and Complexity',	'ednpor2',	2,	100),
 ('6.046J',	'Design and Analysis of Algorithms',	'dorros1',	2,	80),
-('6.073',	'Creating Video Games',	'dorros2',	1,	30);
+('6.073',	'Creating Video Games',	'dorros1',	1,	30);
 
 INSERT INTO `StudentCourse` (`student_id`, `course_id`, `year`) VALUES
 ('skyhar1',	'6.00SC',	2015),
