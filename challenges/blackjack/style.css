@@ -1,0 +1,52 @@
+.deck {
+    position: relative;
+    display: flex;
+}
+
+.deck .card_wrapper {
+    width: 0;
+    overflow: visible;
+    position: relative;
+    font-size: 0.5em;
+    height: 20em;
+    transition: all 2s ease;
+}
+.deck.spread .card_wrapper {
+    font-size: 0.2em;
+}
+.deck .card_wrapper.even {
+    padding-left: 1px;
+}
+.deck.spread .card_wrapper {
+    padding-left: 10px;
+}
+
+.card {
+    display: flex;
+    border: 1px solid #c7c7c7;
+    background-color: #f7f7f7;
+    border-radius: 1em;
+    width: 12em;
+    height: 20em;
+}
+.card .center {
+    width: 8em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.card .left, .card .right {
+    width: 2em;
+    text-align: center;
+}
+.card .right {
+    transform: rotate(180deg);
+}
+.card .center img {
+    width: 3em;
+    display: none;
+}
+.card .left img, .card .right img {
+    width: 1.5em;
+}

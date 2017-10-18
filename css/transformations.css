@@ -1,0 +1,10 @@
+#my_div {
+    border: 1px solid gray;
+    background-color: #e7e7e7;
+    padding: 2em;
+    display: inline-block;
+}
+
+#my_div {
+    transform: skewY(-45deg);
+}
