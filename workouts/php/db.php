@@ -93,4 +93,9 @@ class db
         // end execution
         exit();
     }
+
+    public static function setDatabase($database)
+    {
+        static::$database = $database;
+    }
 }
